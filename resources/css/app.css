@@ -1,0 +1,158 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* Base Styles */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Typing Animation */
+.typing-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.typing-indicator::after {
+    content: '...';
+    display: inline-block;
+    width: 1.5em;
+    overflow: hidden;
+    vertical-align: bottom;
+    animation: typingDots 1.5s infinite steps(4);
+}
+
+@keyframes typingDots {
+    0% { width: 0; margin-left: 0; }
+    50% { width: 1.5em; margin-left: 0; }
+    100% { width: 0; margin-left: 1.5em; }
+}
+
+/* Code Blocks */
+.code-block {
+    position: relative;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    background-color: #1e293b;
+    color: #f8fafc;
+    border-radius: 0.5rem;
+    padding: 1.25rem 1rem 1rem;
+    margin: 1rem 0;
+    overflow-x: auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.code-block::before {
+    content: attr(data-language);
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    color: #94a3b8;
+    background-color: #1e293b;
+    border-bottom-left-radius: 0.5rem;
+}
+
+.code-block pre {
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+.code-block code {
+    display: block;
+    font-family: inherit;
+    line-height: 1.5;
+}
+
+/* Chat Container */
+.chat-container {
+    scroll-behavior: smooth;
+    background-color: #0f172a;
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(30, 41, 59, 0.2) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(30, 41, 59, 0.2) 0%, transparent 20%);
+}
+
+.chat-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+    background-color: #334155;
+    border-radius: 3px;
+}
+
+/* Messages */
+.message {
+    max-width: min(90%, 48rem);
+    word-wrap: break-word;
+    position: relative;
+    transition: all 0.2s ease;
+    opacity: 0;
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+.message.user {
+    background-color: #2563eb;
+    color: white;
+    border-top-right-radius: 0;
+}
+
+.message.bot {
+    background-color: #1e293b;
+    color: #e2e8f0;
+    border-top-left-radius: 0;
+}
+
+/* Input Area */
+#user-input {
+    min-height: 44px;
+    max-height: 200px;
+    scrollbar-width: thin;
+    scrollbar-color: #334155 transparent;
+}
+
+#user-input::-webkit-scrollbar {
+    width: 6px;
+}
+
+#user-input::-webkit-scrollbar-thumb {
+    background-color: #334155;
+    border-radius: 3px;
+}
+
+/* Streaming cursor */
+.streaming-cursor::after {
+    content: '▋';
+    animation: blink 1s infinite;
+    opacity: 1;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+    .chat-container {
+        padding: 0.75rem;
+    }
+
+    .message {
+        max-width: 95%;
+    }
+}
