@@ -1,111 +1,89 @@
-SAGECODE
-Transforming Ideas into Innovative Digital Realities
+# SAGECODE
 
-🕒 last commit last sunday 🗂️ blade 56.4% 🈯 languages 4
+*Transforming Ideas into Innovative Digital Realities*
 
-Built with the tools and technologies:
+![Last Commit](https://img.shields.io/badge/last%20commit-last%20sunday-blue)  
+![Languages](https://img.shields.io/badge/languages-4-blue)  
+![Blade](https://img.shields.io/badge/blade-56.4%25-blue)
 
-⬛ JSON ⬛ Markdown 🟥 npm 🟥 Autoprefixer 🟥 PostCSS 🟧 Composer
-🟨 JavaScript 🟦 XML 🟪 PHP 🟦 Vite 🟪 Axios
+---
 
-Table of Contents
+**Built with the tools and technologies:**
 
-Overview
+![JSON](https://img.shields.io/badge/-JSON-black)  
+![Markdown](https://img.shields.io/badge/-Markdown-black)  
+![npm](https://img.shields.io/badge/-npm-red)  
+![Autoprefixer](https://img.shields.io/badge/-Autoprefixer-red)  
+![PostCSS](https://img.shields.io/badge/-PostCSS-red)  
+![Composer](https://img.shields.io/badge/-Composer-orange)  
+![JavaScript](https://img.shields.io/badge/-JavaScript-yellow)  
+![XML](https://img.shields.io/badge/-XML-blue)  
+![PHP](https://img.shields.io/badge/-PHP-purple)  
+![Vite](https://img.shields.io/badge/-Vite-blueviolet)  
+![Axios](https://img.shields.io/badge/-Axios-purple)
 
-Getting Started
+---
 
-Prerequisites
+## Table of Contents
 
-Installation
+- [Overview](#overview)  
+- [Getting Started](#getting-started)
 
-Usage
+---
 
-Testing
+## Overview
 
-Overview
+**sageCode** is an innovative developer tool that merges Laravel’s comprehensive backend framework with AI-powered debugging capabilities.  
+Designed to streamline development, it offers a scalable architecture, efficient asset management, and interactive troubleshooting features.
 
-sageCode is an innovative developer tool that merges Laravel’s comprehensive backend framework with AI-powered debugging capabilities. Designed to streamline development, it offers a scalable architecture, efficient asset management, and interactive troubleshooting features.
+### Why sageCode?
 
-Why sageCode?
-This project empowers developers to build, manage, and debug Laravel applications more effectively. The core features include:
+This project empowers developers to build, manage, and debug Laravel applications more effectively.  
+The core features include:
 
-🧩 Modular Architecture: Establishes a solid foundation with routing, database, sessions, and background jobs for scalable development.
+- 🧩 **Modular Architecture**: Solid foundation with routing, database, sessions, and background jobs.  
+- 🎨🚀 **Frontend Integration**: Manages assets via Vite and Tailwind CSS for fast UI iteration.  
+- 🤖🛠️ **AI Debugging**: Uses Gemini (Google AI) for real-time debugging support.  
+- 💬👨‍💻 **Interactive Chat**: AI-driven chat interface for debugging and code guidance.  
+- 🔐🧱 **Secure User Management**: Session/authentication/data security with best practices.  
+- ⚙️🚀 **Developer-Centric**: Clean config files, service providers & CLI tools.  
 
-🎨 🚀 Frontend Integration: Seamlessly manages assets with Vite and Tailwind CSS, enabling rapid frontend iteration.
+---
 
-🤖 🛠️ AI Debugging: Integrates Google’s Gemini language model to provide real-time, actionable debugging assistance.
+## Getting Started
 
-💬 👨‍💻 Interactive Chat: Facilitates user interactions with an AI-driven chat interface for troubleshooting and code analysis.
+### Prerequisites
 
-🔐 🧱 Secure User Management: Handles authentication, sessions, and user data with best practices for security and maintainability.
+- **Languages**: PHP  
+- **Package Managers**: `npm`, `composer`
 
-⚙️ 🚀 Developer-Centric: Simplifies workflows with well-organized configs, service providers, and command-line tools.
+---
 
-Getting Started
+### All-in-One Setup Instructions
 
-Prerequisites
+```bash
+# 1. Clone the repository
+git clone https://github.com/medamchat/sageCode
 
-Programming Languages: PHP
+# 2. Navigate into the project
+cd sageCode
 
-Package Manager: Npm, Composer
+# 3. Install dependencies using npm and composer
+npm install
+composer install
 
-Installation
-Build sageCode from the source and install dependencies:
+# 4. Run the application
 
-Clone the repository:
+# Using npm
+npm start
 
-shell
-Copier
-Modifier
-> git clone https://github.com/medamchat/sageCode
-Navigate to the project directory:
+# Using composer
+php [entrypoint]
 
-shell
-Copier
-Modifier
-> cd sageCode
-Install the dependencies:
+# 5. Run tests
 
-Using npm:
+# Using npm
+npm test
 
-markdown
-Copier
-Modifier
-> npm install
-Using composer:
-
-markdown
-Copier
-Modifier
-> composer install
-Usage
-Run the project with:
-
-Using npm:
-
-markdown
-Copier
-Modifier
-> npm start
-Using composer:
-
-css
-Copier
-Modifier
-> php [entrypoint]
-Testing
-Sagecode uses the (test_framework) test framework. Run the test suite with:
-
-Using npm:
-
-shell
-Copier
-Modifier
-> npm test
-Using composer:
-
-shell
-Copier
-Modifier
-> vendor/bin/phpunit
-↩️ Return
+# Using composer
+vendor/bin/phpunit
